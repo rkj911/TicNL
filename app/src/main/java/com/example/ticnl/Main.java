@@ -45,6 +45,16 @@ public class Main extends AppCompatActivity {
                     }
                     i=i+1;
                     b1.setEnabled(false);
+                    if ((a1 == 2 && a2 == 2 && a3 == 2) || (a4 == 2 && a5 == 2 && a6 == 2) || (a7 == 2 && a8 == 2 && a9 == 2) || (a1 == 2 && a5 == 2 && a9 == 2)
+                            || (a3 == 2 && a5 == 2 && a7 == 2) || (a1 == 2 && a4 == 2 && a7 == 2) || (a2 == 2 && a5 == 2 && a8 == 2) || (a3 == 2 && a6 == 2 && a9 == 2)) {
+                        Toast.makeText(getApplicationContext(), "Player X WON!!", Toast.LENGTH_LONG).show();
+                    } else if ((a1 == 3 && a2 == 3 && a3 == 3) || (a4 == 3 && a5 == 3 && a6 == 3) || (a7 == 3 && a8 == 3 && a9 == 3) || (a1 == 3 && a5 == 3 && a9 == 3)
+                            || (a3 == 3 && a5 == 3 && a7 == 3) || (a1 == 3 && a4 == 3 && a7 == 3) || (a2 == 3 && a5 == 3 && a8 == 3) || (a3 == 3 && a6 == 3 && a9 == 3)) {
+                        Toast.makeText(getApplicationContext(), "Player Y WON!!", Toast.LENGTH_LONG).show();
+                    } else if (i==9)
+                    {
+                        Toast.makeText(getApplicationContext(), "No one Won!!", Toast.LENGTH_LONG).show();
+                    }
                 }
             });
             b2.setOnClickListener(new View.OnClickListener() {
@@ -63,6 +73,16 @@ public class Main extends AppCompatActivity {
                     }
                     i=i+1;
                     b2.setEnabled(false);
+                    if ((a1 == 2 && a2 == 2 && a3 == 2) || (a4 == 2 && a5 == 2 && a6 == 2) || (a7 == 2 && a8 == 2 && a9 == 2) || (a1 == 2 && a5 == 2 && a9 == 2)
+                            || (a3 == 2 && a5 == 2 && a7 == 2) || (a1 == 2 && a4 == 2 && a7 == 2) || (a2 == 2 && a5 == 2 && a8 == 2) || (a3 == 2 && a6 == 2 && a9 == 2)) {
+                        Toast.makeText(getApplicationContext(), "Player X WON!!", Toast.LENGTH_LONG).show();
+                    } else if ((a1 == 3 && a2 == 3 && a3 == 3) || (a4 == 3 && a5 == 3 && a6 == 3) || (a7 == 3 && a8 == 3 && a9 == 3) || (a1 == 3 && a5 == 3 && a9 == 3)
+                            || (a3 == 3 && a5 == 3 && a7 == 3) || (a1 == 3 && a4 == 3 && a7 == 3) || (a2 == 3 && a5 == 3 && a8 == 3) || (a3 == 3 && a6 == 3 && a9 == 3)) {
+                        Toast.makeText(getApplicationContext(), "Player Y WON!!", Toast.LENGTH_LONG).show();
+                    } else if (i==9)
+                    {
+                        Toast.makeText(getApplicationContext(), "No one Won!!", Toast.LENGTH_LONG).show();
+                    }
                 }
             });
             b3.setOnClickListener(new View.OnClickListener() {
@@ -81,6 +101,16 @@ public class Main extends AppCompatActivity {
                     }
                     i=i+1;
                     b3.setEnabled(false);
+                    if ((a1 == 2 && a2 == 2 && a3 == 2) || (a4 == 2 && a5 == 2 && a6 == 2) || (a7 == 2 && a8 == 2 && a9 == 2) || (a1 == 2 && a5 == 2 && a9 == 2)
+                            || (a3 == 2 && a5 == 2 && a7 == 2) || (a1 == 2 && a4 == 2 && a7 == 2) || (a2 == 2 && a5 == 2 && a8 == 2) || (a3 == 2 && a6 == 2 && a9 == 2)) {
+                        Toast.makeText(getApplicationContext(), "Player X WON!!", Toast.LENGTH_LONG).show();
+                    } else if ((a1 == 3 && a2 == 3 && a3 == 3) || (a4 == 3 && a5 == 3 && a6 == 3) || (a7 == 3 && a8 == 3 && a9 == 3) || (a1 == 3 && a5 == 3 && a9 == 3)
+                            || (a3 == 3 && a5 == 3 && a7 == 3) || (a1 == 3 && a4 == 3 && a7 == 3) || (a2 == 3 && a5 == 3 && a8 == 3) || (a3 == 3 && a6 == 3 && a9 == 3)) {
+                        Toast.makeText(getApplicationContext(), "Player Y WON!!", Toast.LENGTH_LONG).show();
+                    } else if (i==9)
+                    {
+                        Toast.makeText(getApplicationContext(), "No one Won!!", Toast.LENGTH_LONG).show();
+                    }
                 }
             });
             b4.setOnClickListener(new View.OnClickListener() {
@@ -99,6 +129,16 @@ public class Main extends AppCompatActivity {
                     }
                     i=i+1;
                     b4.setEnabled(false);
+                    if ((a1 == 2 && a2 == 2 && a3 == 2) || (a4 == 2 && a5 == 2 && a6 == 2) || (a7 == 2 && a8 == 2 && a9 == 2) || (a1 == 2 && a5 == 2 && a9 == 2)
+                            || (a3 == 2 && a5 == 2 && a7 == 2) || (a1 == 2 && a4 == 2 && a7 == 2) || (a2 == 2 && a5 == 2 && a8 == 2) || (a3 == 2 && a6 == 2 && a9 == 2)) {
+                        Toast.makeText(getApplicationContext(), "Player X WON!!", Toast.LENGTH_LONG).show();
+                    } else if ((a1 == 3 && a2 == 3 && a3 == 3) || (a4 == 3 && a5 == 3 && a6 == 3) || (a7 == 3 && a8 == 3 && a9 == 3) || (a1 == 3 && a5 == 3 && a9 == 3)
+                            || (a3 == 3 && a5 == 3 && a7 == 3) || (a1 == 3 && a4 == 3 && a7 == 3) || (a2 == 3 && a5 == 3 && a8 == 3) || (a3 == 3 && a6 == 3 && a9 == 3)) {
+                        Toast.makeText(getApplicationContext(), "Player Y WON!!", Toast.LENGTH_LONG).show();
+                    } else if (i==9)
+                    {
+                        Toast.makeText(getApplicationContext(), "No one Won!!", Toast.LENGTH_LONG).show();
+                    }
                 }
             });
             b5.setOnClickListener(new View.OnClickListener() {
@@ -116,6 +156,16 @@ public class Main extends AppCompatActivity {
                     }
                     i=i+1;
                     b5.setEnabled(false);
+                    if ((a1 == 2 && a2 == 2 && a3 == 2) || (a4 == 2 && a5 == 2 && a6 == 2) || (a7 == 2 && a8 == 2 && a9 == 2) || (a1 == 2 && a5 == 2 && a9 == 2)
+                            || (a3 == 2 && a5 == 2 && a7 == 2) || (a1 == 2 && a4 == 2 && a7 == 2) || (a2 == 2 && a5 == 2 && a8 == 2) || (a3 == 2 && a6 == 2 && a9 == 2)) {
+                        Toast.makeText(getApplicationContext(), "Player X WON!!", Toast.LENGTH_LONG).show();
+                    } else if ((a1 == 3 && a2 == 3 && a3 == 3) || (a4 == 3 && a5 == 3 && a6 == 3) || (a7 == 3 && a8 == 3 && a9 == 3) || (a1 == 3 && a5 == 3 && a9 == 3)
+                            || (a3 == 3 && a5 == 3 && a7 == 3) || (a1 == 3 && a4 == 3 && a7 == 3) || (a2 == 3 && a5 == 3 && a8 == 3) || (a3 == 3 && a6 == 3 && a9 == 3)) {
+                        Toast.makeText(getApplicationContext(), "Player Y WON!!", Toast.LENGTH_LONG).show();
+                    } else if (i==9)
+                    {
+                        Toast.makeText(getApplicationContext(), "No one Won!!", Toast.LENGTH_LONG).show();
+                    }
                 }
             });
             b6.setOnClickListener(new View.OnClickListener() {
@@ -134,6 +184,16 @@ public class Main extends AppCompatActivity {
                     }
                     i=i+1;
                     b6.setEnabled(false);
+                    if ((a1 == 2 && a2 == 2 && a3 == 2) || (a4 == 2 && a5 == 2 && a6 == 2) || (a7 == 2 && a8 == 2 && a9 == 2) || (a1 == 2 && a5 == 2 && a9 == 2)
+                            || (a3 == 2 && a5 == 2 && a7 == 2) || (a1 == 2 && a4 == 2 && a7 == 2) || (a2 == 2 && a5 == 2 && a8 == 2) || (a3 == 2 && a6 == 2 && a9 == 2)) {
+                        Toast.makeText(getApplicationContext(), "Player X WON!!", Toast.LENGTH_LONG).show();
+                    } else if ((a1 == 3 && a2 == 3 && a3 == 3) || (a4 == 3 && a5 == 3 && a6 == 3) || (a7 == 3 && a8 == 3 && a9 == 3) || (a1 == 3 && a5 == 3 && a9 == 3)
+                            || (a3 == 3 && a5 == 3 && a7 == 3) || (a1 == 3 && a4 == 3 && a7 == 3) || (a2 == 3 && a5 == 3 && a8 == 3) || (a3 == 3 && a6 == 3 && a9 == 3)) {
+                        Toast.makeText(getApplicationContext(), "Player Y WON!!", Toast.LENGTH_LONG).show();
+                    } else if (i==9)
+                    {
+                        Toast.makeText(getApplicationContext(), "No one Won!!", Toast.LENGTH_LONG).show();
+                    }
                 }
             });
             b7.setOnClickListener(new View.OnClickListener() {
@@ -152,6 +212,16 @@ public class Main extends AppCompatActivity {
                     }
                     i=i+1;
                     b7.setEnabled(false);
+                    if ((a1 == 2 && a2 == 2 && a3 == 2) || (a4 == 2 && a5 == 2 && a6 == 2) || (a7 == 2 && a8 == 2 && a9 == 2) || (a1 == 2 && a5 == 2 && a9 == 2)
+                            || (a3 == 2 && a5 == 2 && a7 == 2) || (a1 == 2 && a4 == 2 && a7 == 2) || (a2 == 2 && a5 == 2 && a8 == 2) || (a3 == 2 && a6 == 2 && a9 == 2)) {
+                        Toast.makeText(getApplicationContext(), "Player X WON!!", Toast.LENGTH_LONG).show();
+                    } else if ((a1 == 3 && a2 == 3 && a3 == 3) || (a4 == 3 && a5 == 3 && a6 == 3) || (a7 == 3 && a8 == 3 && a9 == 3) || (a1 == 3 && a5 == 3 && a9 == 3)
+                            || (a3 == 3 && a5 == 3 && a7 == 3) || (a1 == 3 && a4 == 3 && a7 == 3) || (a2 == 3 && a5 == 3 && a8 == 3) || (a3 == 3 && a6 == 3 && a9 == 3)) {
+                        Toast.makeText(getApplicationContext(), "Player Y WON!!", Toast.LENGTH_LONG).show();
+                    } else if (i==9)
+                    {
+                        Toast.makeText(getApplicationContext(), "No one Won!!", Toast.LENGTH_LONG).show();
+                    }
                 }
             });
             b8.setOnClickListener(new View.OnClickListener() {
@@ -170,6 +240,16 @@ public class Main extends AppCompatActivity {
                     }
                     i=i+1;
                     b8.setEnabled(false);
+                    if ((a1 == 2 && a2 == 2 && a3 == 2) || (a4 == 2 && a5 == 2 && a6 == 2) || (a7 == 2 && a8 == 2 && a9 == 2) || (a1 == 2 && a5 == 2 && a9 == 2)
+                            || (a3 == 2 && a5 == 2 && a7 == 2) || (a1 == 2 && a4 == 2 && a7 == 2) || (a2 == 2 && a5 == 2 && a8 == 2) || (a3 == 2 && a6 == 2 && a9 == 2)) {
+                        Toast.makeText(getApplicationContext(), "Player X WON!!", Toast.LENGTH_LONG).show();
+                    } else if ((a1 == 3 && a2 == 3 && a3 == 3) || (a4 == 3 && a5 == 3 && a6 == 3) || (a7 == 3 && a8 == 3 && a9 == 3) || (a1 == 3 && a5 == 3 && a9 == 3)
+                            || (a3 == 3 && a5 == 3 && a7 == 3) || (a1 == 3 && a4 == 3 && a7 == 3) || (a2 == 3 && a5 == 3 && a8 == 3) || (a3 == 3 && a6 == 3 && a9 == 3)) {
+                        Toast.makeText(getApplicationContext(), "Player Y WON!!", Toast.LENGTH_LONG).show();
+                    } else if (i==9)
+                    {
+                        Toast.makeText(getApplicationContext(), "No one Won!!", Toast.LENGTH_LONG).show();
+                    }
                 }
             });
             b9.setOnClickListener(new View.OnClickListener() {
@@ -188,22 +268,17 @@ public class Main extends AppCompatActivity {
                     }
                     i=i+1;
                     b9.setEnabled(false);
+                    if ((a1 == 2 && a2 == 2 && a3 == 2) || (a4 == 2 && a5 == 2 && a6 == 2) || (a7 == 2 && a8 == 2 && a9 == 2) || (a1 == 2 && a5 == 2 && a9 == 2)
+                            || (a3 == 2 && a5 == 2 && a7 == 2) || (a1 == 2 && a4 == 2 && a7 == 2) || (a2 == 2 && a5 == 2 && a8 == 2) || (a3 == 2 && a6 == 2 && a9 == 2)) {
+                        Toast.makeText(getApplicationContext(), "Player X WON!!", Toast.LENGTH_LONG).show();
+                    } else if ((a1 == 3 && a2 == 3 && a3 == 3) || (a4 == 3 && a5 == 3 && a6 == 3) || (a7 == 3 && a8 == 3 && a9 == 3) || (a1 == 3 && a5 == 3 && a9 == 3)
+                            || (a3 == 3 && a5 == 3 && a7 == 3) || (a1 == 3 && a4 == 3 && a7 == 3) || (a2 == 3 && a5 == 3 && a8 == 3) || (a3 == 3 && a6 == 3 && a9 == 3)) {
+                        Toast.makeText(getApplicationContext(), "Player Y WON!!", Toast.LENGTH_LONG).show();
+                    } else if (i==9)
+                    {
+                        Toast.makeText(getApplicationContext(), "No one Won!!", Toast.LENGTH_LONG).show();
+                    }
                 }
             });
-
-
-        if ((a1 == 2 && a2 == 2 && a3 == 2) || (a4 == 2 && a5 == 2 && a6 == 2) || (a7 == 2 && a8 == 2 && a9 == 2) || (a1 == 2 && a5 == 2 && a9 == 2)
-                    || (a3 == 2 && a5 == 2 && a7 == 2) || (a1 == 2 && a4 == 2 && a7 == 2) || (a2 == 2 && a5 == 2 && a8 == 2) || (a3 == 2 && a6 == 2 && a9 == 2)) {
-                Toast.makeText(getApplicationContext(), "Player X WON!!", Toast.LENGTH_LONG).show();
-            } else if ((a1 == 3 && a2 == 3 && a3 == 3) || (a4 == 3 && a5 == 3 && a6 == 3) || (a7 == 3 && a8 == 3 && a9 == 3) || (a1 == 3 && a5 == 3 && a9 == 3)
-                    || (a3 == 3 && a5 == 3 && a7 == 3) || (a1 == 3 && a4 == 3 && a7 == 3) || (a2 == 3 && a5 == 3 && a8 == 3) || (a3 == 3 && a6 == 3 && a9 == 3)) {
-                Toast.makeText(getApplicationContext(), "Player Y WON!!", Toast.LENGTH_LONG).show();
-            } else if (i==9)
-            {
-                Toast.makeText(getApplicationContext(), "No one Won!!", Toast.LENGTH_LONG).show();
-            }
-
-
-
     }
 }
