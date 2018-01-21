@@ -13,13 +13,37 @@ public class Main extends AppCompatActivity {
     int i,p=1,a1=0,a2=0,a3=0,a4=0,a5=0,a6=0,a7=0,a8=0,a9=0;
     Button b1,b2,b3,b4,b5,b6,b7,b8,b9;
     TextView tv;
+    public void checkResult()
+    {
+        if ((a1 == 2 && a2 == 2 && a3 == 2) || (a4 == 2 && a5 == 2 && a6 == 2) || (a7 == 2 && a8 == 2 && a9 == 2) || (a1 == 2 && a5 == 2 && a9 == 2)
+                || (a3 == 2 && a5 == 2 && a7 == 2) || (a1 == 2 && a4 == 2 && a7 == 2) || (a2 == 2 && a5 == 2 && a8 == 2) || (a3 == 2 && a6 == 2 && a9 == 2)) {
+            Toast.makeText(getApplicationContext(), "Player X WON!!", Toast.LENGTH_LONG).show();
+            Intent i=new Intent(getApplicationContext(),XW.class);
+            startActivity(i);
+        } else if ((a1 == 3 && a2 == 3 && a3 == 3) || (a4 == 3 && a5 == 3 && a6 == 3) || (a7 == 3 && a8 == 3 && a9 == 3) || (a1 == 3 && a5 == 3 && a9 == 3)
+                || (a3 == 3 && a5 == 3 && a7 == 3) || (a1 == 3 && a4 == 3 && a7 == 3) || (a2 == 3 && a5 == 3 && a8 == 3) || (a3 == 3 && a6 == 3 && a9 == 3)) {
+            Toast.makeText(getApplicationContext(), "Player Y WON!!", Toast.LENGTH_LONG).show();
+            Intent i=new Intent(getApplicationContext(),YW.class);
+            startActivity(i);
+        } else if (i==9)
+        {
+            Toast.makeText(getApplicationContext(), "No one Won!!", Toast.LENGTH_LONG).show();
+        }
+    }
+    public void Playero()
+    {
+        p = p + 1;
+        tv.setText("Move X");
+    }
+    public void Playerx()
+    {
+        p = p + 1;
+        tv.setText("Move O");
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-
             b1 = (Button) findViewById(R.id.b1);
             b2 = (Button) findViewById(R.id.b2);
             b3 = (Button) findViewById(R.id.b3);
@@ -35,33 +59,18 @@ public class Main extends AppCompatActivity {
                 public void onClick(View v) {
                     if (p == 1 || p == 3 || p == 5 || p == 7 || p == 9) {
                         b1.setText("X");
-                        p = p + 1;
-                        tv.setText("Move O");
+                        Playerx();
                         a1 = 2;
 
                     } else {
                         b1.setText("O");
-                        p = p + 1;
-                        tv.setText("Move X");
+                        Playero();
                         a1 = 3;
 
                     }
                     i=i+1;
                     b1.setEnabled(false);
-                    if ((a1 == 2 && a2 == 2 && a3 == 2) || (a4 == 2 && a5 == 2 && a6 == 2) || (a7 == 2 && a8 == 2 && a9 == 2) || (a1 == 2 && a5 == 2 && a9 == 2)
-                            || (a3 == 2 && a5 == 2 && a7 == 2) || (a1 == 2 && a4 == 2 && a7 == 2) || (a2 == 2 && a5 == 2 && a8 == 2) || (a3 == 2 && a6 == 2 && a9 == 2)) {
-                        Toast.makeText(getApplicationContext(), "Player X WON!!", Toast.LENGTH_LONG).show();
-                        Intent i=new Intent(getApplicationContext(),XW.class);
-                        startActivity(i);
-                    } else if ((a1 == 3 && a2 == 3 && a3 == 3) || (a4 == 3 && a5 == 3 && a6 == 3) || (a7 == 3 && a8 == 3 && a9 == 3) || (a1 == 3 && a5 == 3 && a9 == 3)
-                            || (a3 == 3 && a5 == 3 && a7 == 3) || (a1 == 3 && a4 == 3 && a7 == 3) || (a2 == 3 && a5 == 3 && a8 == 3) || (a3 == 3 && a6 == 3 && a9 == 3)) {
-                        Toast.makeText(getApplicationContext(), "Player Y WON!!", Toast.LENGTH_LONG).show();
-                        Intent i=new Intent(getApplicationContext(),YW.class);
-                        startActivity(i);
-                    } else if (i==9)
-                    {
-                        Toast.makeText(getApplicationContext(), "No one Won!!", Toast.LENGTH_LONG).show();
-                    }
+                    checkResult();
                 }
             });
             b2.setOnClickListener(new View.OnClickListener() {
@@ -69,31 +78,16 @@ public class Main extends AppCompatActivity {
                 public void onClick(View v) {
                     if (p == 1 || p == 3 || p == 5 || p == 7 || p == 9) {
                         b2.setText("X");
-                        p = p + 1;
-                        tv.setText("Move O");
+                        Playerx();
                         a2 = 2;
                     } else {
                         b2.setText("O");
-                        p = p + 1;
-                        tv.setText("Move X");
+                        Playero();
                         a2 = 3;
                     }
                     i=i+1;
                     b2.setEnabled(false);
-                    if ((a1 == 2 && a2 == 2 && a3 == 2) || (a4 == 2 && a5 == 2 && a6 == 2) || (a7 == 2 && a8 == 2 && a9 == 2) || (a1 == 2 && a5 == 2 && a9 == 2)
-                            || (a3 == 2 && a5 == 2 && a7 == 2) || (a1 == 2 && a4 == 2 && a7 == 2) || (a2 == 2 && a5 == 2 && a8 == 2) || (a3 == 2 && a6 == 2 && a9 == 2)) {
-                        Toast.makeText(getApplicationContext(), "Player X WON!!", Toast.LENGTH_LONG).show();
-                        Intent i=new Intent(getApplicationContext(),XW.class);
-                        startActivity(i);
-                    } else if ((a1 == 3 && a2 == 3 && a3 == 3) || (a4 == 3 && a5 == 3 && a6 == 3) || (a7 == 3 && a8 == 3 && a9 == 3) || (a1 == 3 && a5 == 3 && a9 == 3)
-                            || (a3 == 3 && a5 == 3 && a7 == 3) || (a1 == 3 && a4 == 3 && a7 == 3) || (a2 == 3 && a5 == 3 && a8 == 3) || (a3 == 3 && a6 == 3 && a9 == 3)) {
-                        Toast.makeText(getApplicationContext(), "Player Y WON!!", Toast.LENGTH_LONG).show();
-                        Intent i=new Intent(getApplicationContext(),YW.class);
-                        startActivity(i);
-                    } else if (i==9)
-                    {
-                        Toast.makeText(getApplicationContext(), "No one Won!!", Toast.LENGTH_LONG).show();
-                    }
+                    checkResult();
                 }
             });
             b3.setOnClickListener(new View.OnClickListener() {
@@ -101,31 +95,16 @@ public class Main extends AppCompatActivity {
                 public void onClick(View v) {
                     if (p == 1 || p == 3 || p == 5 || p == 7 || p == 9) {
                         b3.setText("X");
-                        p = p + 1;
-                        tv.setText("Move O");
+                        Playerx();
                         a3 = 2;
                     } else {
                         b3.setText("O");
-                        p = p + 1;
-                        tv.setText("Move X");
+                        Playero();
                         a3 = 3;
                     }
                     i=i+1;
                     b3.setEnabled(false);
-                    if ((a1 == 2 && a2 == 2 && a3 == 2) || (a4 == 2 && a5 == 2 && a6 == 2) || (a7 == 2 && a8 == 2 && a9 == 2) || (a1 == 2 && a5 == 2 && a9 == 2)
-                            || (a3 == 2 && a5 == 2 && a7 == 2) || (a1 == 2 && a4 == 2 && a7 == 2) || (a2 == 2 && a5 == 2 && a8 == 2) || (a3 == 2 && a6 == 2 && a9 == 2)) {
-                        Toast.makeText(getApplicationContext(), "Player X WON!!", Toast.LENGTH_LONG).show();
-                        Intent i=new Intent(getApplicationContext(),XW.class);
-                        startActivity(i);
-                    } else if ((a1 == 3 && a2 == 3 && a3 == 3) || (a4 == 3 && a5 == 3 && a6 == 3) || (a7 == 3 && a8 == 3 && a9 == 3) || (a1 == 3 && a5 == 3 && a9 == 3)
-                            || (a3 == 3 && a5 == 3 && a7 == 3) || (a1 == 3 && a4 == 3 && a7 == 3) || (a2 == 3 && a5 == 3 && a8 == 3) || (a3 == 3 && a6 == 3 && a9 == 3)) {
-                        Toast.makeText(getApplicationContext(), "Player Y WON!!", Toast.LENGTH_LONG).show();
-                        Intent i=new Intent(getApplicationContext(),YW.class);
-                        startActivity(i);
-                    } else if (i==9)
-                    {
-                        Toast.makeText(getApplicationContext(), "No one Won!!", Toast.LENGTH_LONG).show();
-                    }
+                    checkResult();
                 }
             });
             b4.setOnClickListener(new View.OnClickListener() {
@@ -133,31 +112,16 @@ public class Main extends AppCompatActivity {
                 public void onClick(View v) {
                     if (p == 1 || p == 3 || p == 5 || p == 7 || p == 9) {
                         b4.setText("X");
-                        p = p + 1;
-                        tv.setText("Move O");
+                        Playerx();
                         a4 = 2;
                     } else {
                         b4.setText("O");
-                        p = p + 1;
-                        tv.setText("Move X");
+                        Playero();
                         a4 = 3;
                     }
                     i=i+1;
                     b4.setEnabled(false);
-                    if ((a1 == 2 && a2 == 2 && a3 == 2) || (a4 == 2 && a5 == 2 && a6 == 2) || (a7 == 2 && a8 == 2 && a9 == 2) || (a1 == 2 && a5 == 2 && a9 == 2)
-                            || (a3 == 2 && a5 == 2 && a7 == 2) || (a1 == 2 && a4 == 2 && a7 == 2) || (a2 == 2 && a5 == 2 && a8 == 2) || (a3 == 2 && a6 == 2 && a9 == 2)) {
-                        Toast.makeText(getApplicationContext(), "Player X WON!!", Toast.LENGTH_LONG).show();
-                        Intent i=new Intent(getApplicationContext(),XW.class);
-                        startActivity(i);
-                    } else if ((a1 == 3 && a2 == 3 && a3 == 3) || (a4 == 3 && a5 == 3 && a6 == 3) || (a7 == 3 && a8 == 3 && a9 == 3) || (a1 == 3 && a5 == 3 && a9 == 3)
-                            || (a3 == 3 && a5 == 3 && a7 == 3) || (a1 == 3 && a4 == 3 && a7 == 3) || (a2 == 3 && a5 == 3 && a8 == 3) || (a3 == 3 && a6 == 3 && a9 == 3)) {
-                        Toast.makeText(getApplicationContext(), "Player Y WON!!", Toast.LENGTH_LONG).show();
-                        Intent i=new Intent(getApplicationContext(),YW.class);
-                        startActivity(i);
-                    } else if (i==9)
-                    {
-                        Toast.makeText(getApplicationContext(), "No one Won!!", Toast.LENGTH_LONG).show();
-                    }
+                    checkResult();
                 }
             });
             b5.setOnClickListener(new View.OnClickListener() {
@@ -165,30 +129,16 @@ public class Main extends AppCompatActivity {
                 public void onClick(View v) {
                     if (p == 1 || p == 3 || p == 5 || p == 7 || p == 9) {
                         b5.setText("X");
-                        p = p + 1;
-                        tv.setText("Move O");
+                        Playerx();
                         a5 = 2;
                     } else {
                         b5.setText("O");
-                        p = p + 1;
+                        Playero();
                         a5 = 3;
                     }
                     i=i+1;
                     b5.setEnabled(false);
-                    if ((a1 == 2 && a2 == 2 && a3 == 2) || (a4 == 2 && a5 == 2 && a6 == 2) || (a7 == 2 && a8 == 2 && a9 == 2) || (a1 == 2 && a5 == 2 && a9 == 2)
-                            || (a3 == 2 && a5 == 2 && a7 == 2) || (a1 == 2 && a4 == 2 && a7 == 2) || (a2 == 2 && a5 == 2 && a8 == 2) || (a3 == 2 && a6 == 2 && a9 == 2)) {
-                        Toast.makeText(getApplicationContext(), "Player X WON!!", Toast.LENGTH_LONG).show();
-                        Intent i=new Intent(getApplicationContext(),XW.class);
-                        startActivity(i);
-                    } else if ((a1 == 3 && a2 == 3 && a3 == 3) || (a4 == 3 && a5 == 3 && a6 == 3) || (a7 == 3 && a8 == 3 && a9 == 3) || (a1 == 3 && a5 == 3 && a9 == 3)
-                            || (a3 == 3 && a5 == 3 && a7 == 3) || (a1 == 3 && a4 == 3 && a7 == 3) || (a2 == 3 && a5 == 3 && a8 == 3) || (a3 == 3 && a6 == 3 && a9 == 3)) {
-                        Toast.makeText(getApplicationContext(), "Player Y WON!!", Toast.LENGTH_LONG).show();
-                        Intent i=new Intent(getApplicationContext(),YW.class);
-                        startActivity(i);
-                    } else if (i==9)
-                    {
-                        Toast.makeText(getApplicationContext(), "No one Won!!", Toast.LENGTH_LONG).show();
-                    }
+                    checkResult();
                 }
             });
             b6.setOnClickListener(new View.OnClickListener() {
@@ -196,31 +146,16 @@ public class Main extends AppCompatActivity {
                 public void onClick(View v) {
                     if (p == 1 || p == 3 || p == 5 || p == 7 || p == 9) {
                         b6.setText("X");
-                        p = p + 1;
-                        tv.setText("Move O");
+                        Playerx();
                         a6 = 2;
                     } else {
                         b6.setText("O");
-                        p = p + 1;
-                        tv.setText("Move X");
+                        Playero();
                         a6 = 3;
                     }
                     i=i+1;
                     b6.setEnabled(false);
-                    if ((a1 == 2 && a2 == 2 && a3 == 2) || (a4 == 2 && a5 == 2 && a6 == 2) || (a7 == 2 && a8 == 2 && a9 == 2) || (a1 == 2 && a5 == 2 && a9 == 2)
-                            || (a3 == 2 && a5 == 2 && a7 == 2) || (a1 == 2 && a4 == 2 && a7 == 2) || (a2 == 2 && a5 == 2 && a8 == 2) || (a3 == 2 && a6 == 2 && a9 == 2)) {
-                        Toast.makeText(getApplicationContext(), "Player X WON!!", Toast.LENGTH_LONG).show();
-                        Intent i=new Intent(getApplicationContext(),XW.class);
-                        startActivity(i);
-                    } else if ((a1 == 3 && a2 == 3 && a3 == 3) || (a4 == 3 && a5 == 3 && a6 == 3) || (a7 == 3 && a8 == 3 && a9 == 3) || (a1 == 3 && a5 == 3 && a9 == 3)
-                            || (a3 == 3 && a5 == 3 && a7 == 3) || (a1 == 3 && a4 == 3 && a7 == 3) || (a2 == 3 && a5 == 3 && a8 == 3) || (a3 == 3 && a6 == 3 && a9 == 3)) {
-                        Toast.makeText(getApplicationContext(), "Player Y WON!!", Toast.LENGTH_LONG).show();
-                        Intent i=new Intent(getApplicationContext(),YW.class);
-                        startActivity(i);
-                    } else if (i==9)
-                    {
-                        Toast.makeText(getApplicationContext(), "No one Won!!", Toast.LENGTH_LONG).show();
-                    }
+                    checkResult();
                 }
             });
             b7.setOnClickListener(new View.OnClickListener() {
@@ -228,31 +163,16 @@ public class Main extends AppCompatActivity {
                 public void onClick(View v) {
                     if (p == 1 || p == 3 || p == 5 || p == 7 || p == 9) {
                         b7.setText("X");
-                        p = p + 1;
-                        tv.setText("Move O");
+                        Playerx();
                         a7 = 2;
                     } else {
                         b7.setText("O");
-                        p = p + 1;
-                        tv.setText("Move X");
+                        Playero();
                         a7 = 3;
                     }
                     i=i+1;
                     b7.setEnabled(false);
-                    if ((a1 == 2 && a2 == 2 && a3 == 2) || (a4 == 2 && a5 == 2 && a6 == 2) || (a7 == 2 && a8 == 2 && a9 == 2) || (a1 == 2 && a5 == 2 && a9 == 2)
-                            || (a3 == 2 && a5 == 2 && a7 == 2) || (a1 == 2 && a4 == 2 && a7 == 2) || (a2 == 2 && a5 == 2 && a8 == 2) || (a3 == 2 && a6 == 2 && a9 == 2)) {
-                        Toast.makeText(getApplicationContext(), "Player X WON!!", Toast.LENGTH_LONG).show();
-                        Intent i=new Intent(getApplicationContext(),XW.class);
-                        startActivity(i);
-                    } else if ((a1 == 3 && a2 == 3 && a3 == 3) || (a4 == 3 && a5 == 3 && a6 == 3) || (a7 == 3 && a8 == 3 && a9 == 3) || (a1 == 3 && a5 == 3 && a9 == 3)
-                            || (a3 == 3 && a5 == 3 && a7 == 3) || (a1 == 3 && a4 == 3 && a7 == 3) || (a2 == 3 && a5 == 3 && a8 == 3) || (a3 == 3 && a6 == 3 && a9 == 3)) {
-                        Toast.makeText(getApplicationContext(), "Player Y WON!!", Toast.LENGTH_LONG).show();
-                        Intent i=new Intent(getApplicationContext(),YW.class);
-                        startActivity(i);
-                    } else if (i==9)
-                    {
-                        Toast.makeText(getApplicationContext(), "No one Won!!", Toast.LENGTH_LONG).show();
-                    }
+                    checkResult();
                 }
             });
             b8.setOnClickListener(new View.OnClickListener() {
@@ -260,31 +180,16 @@ public class Main extends AppCompatActivity {
                 public void onClick(View v) {
                     if (p == 1 || p == 3 || p == 5 || p == 7 || p == 9) {
                         b8.setText("X");
-                        p = p + 1;
-                        tv.setText("Move O");
+                        Playerx();
                         a8 = 2;
                     } else {
                         b8.setText("O");
-                        p = p + 1;
-                        tv.setText("Move X");
+                        Playero();
                         a8 = 3;
                     }
                     i=i+1;
                     b8.setEnabled(false);
-                    if ((a1 == 2 && a2 == 2 && a3 == 2) || (a4 == 2 && a5 == 2 && a6 == 2) || (a7 == 2 && a8 == 2 && a9 == 2) || (a1 == 2 && a5 == 2 && a9 == 2)
-                            || (a3 == 2 && a5 == 2 && a7 == 2) || (a1 == 2 && a4 == 2 && a7 == 2) || (a2 == 2 && a5 == 2 && a8 == 2) || (a3 == 2 && a6 == 2 && a9 == 2)) {
-                        Toast.makeText(getApplicationContext(), "Player X WON!!", Toast.LENGTH_LONG).show();
-                        Intent i=new Intent(getApplicationContext(),XW.class);
-                        startActivity(i);
-                    } else if ((a1 == 3 && a2 == 3 && a3 == 3) || (a4 == 3 && a5 == 3 && a6 == 3) || (a7 == 3 && a8 == 3 && a9 == 3) || (a1 == 3 && a5 == 3 && a9 == 3)
-                            || (a3 == 3 && a5 == 3 && a7 == 3) || (a1 == 3 && a4 == 3 && a7 == 3) || (a2 == 3 && a5 == 3 && a8 == 3) || (a3 == 3 && a6 == 3 && a9 == 3)) {
-                        Toast.makeText(getApplicationContext(), "Player Y WON!!", Toast.LENGTH_LONG).show();
-                        Intent i=new Intent(getApplicationContext(),YW.class);
-                        startActivity(i);
-                    } else if (i==9)
-                    {
-                        Toast.makeText(getApplicationContext(), "No one Won!!", Toast.LENGTH_LONG).show();
-                    }
+                    checkResult();
                 }
             });
             b9.setOnClickListener(new View.OnClickListener() {
@@ -292,31 +197,16 @@ public class Main extends AppCompatActivity {
                 public void onClick(View v) {
                     if (p == 1 || p == 3 || p == 5 || p == 7 || p == 9) {
                         b9.setText("X");
-                        p = p + 1;
-                        tv.setText("Move O");
+                        Playerx();
                         a9 = 2;
                     } else {
                         b9.setText("O");
-                        p = p + 1;
-                        tv.setText("Move X");
+                        Playero();
                         a9 = 3;
                     }
                     i=i+1;
                     b9.setEnabled(false);
-                    if ((a1 == 2 && a2 == 2 && a3 == 2) || (a4 == 2 && a5 == 2 && a6 == 2) || (a7 == 2 && a8 == 2 && a9 == 2) || (a1 == 2 && a5 == 2 && a9 == 2)
-                            || (a3 == 2 && a5 == 2 && a7 == 2) || (a1 == 2 && a4 == 2 && a7 == 2) || (a2 == 2 && a5 == 2 && a8 == 2) || (a3 == 2 && a6 == 2 && a9 == 2)) {
-                        Toast.makeText(getApplicationContext(), "Player X WON!!", Toast.LENGTH_LONG).show();
-                        Intent i=new Intent(getApplicationContext(),XW.class);
-                        startActivity(i);
-                    } else if ((a1 == 3 && a2 == 3 && a3 == 3) || (a4 == 3 && a5 == 3 && a6 == 3) || (a7 == 3 && a8 == 3 && a9 == 3) || (a1 == 3 && a5 == 3 && a9 == 3)
-                            || (a3 == 3 && a5 == 3 && a7 == 3) || (a1 == 3 && a4 == 3 && a7 == 3) || (a2 == 3 && a5 == 3 && a8 == 3) || (a3 == 3 && a6 == 3 && a9 == 3)) {
-                        Toast.makeText(getApplicationContext(), "Player Y WON!!", Toast.LENGTH_LONG).show();
-                        Intent i=new Intent(getApplicationContext(),YW.class);
-                        startActivity(i);
-                    } else if (i==9)
-                    {
-                        Toast.makeText(getApplicationContext(), "No one Won!!", Toast.LENGTH_LONG).show();
-                    }
+                    checkResult();
                 }
             });
     }
